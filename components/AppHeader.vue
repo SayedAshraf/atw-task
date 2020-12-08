@@ -1,5 +1,6 @@
 <template>
   <b-navbar type="dark" variant="dark" class="AppHeader">
+    <!-- looping on items in data  -->
     <b-navbar-nav class="list" v-for="(item, idx) in items" :key="idx">
       <b-nav-item class="list-item" :to="item.to">{{ item.title }}</b-nav-item>
     </b-navbar-nav>

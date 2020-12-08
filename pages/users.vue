@@ -1,22 +1,38 @@
 <template>
-  <section class="section is-medium">
-    <div class="container has-text-centered">
-      <h1 class="title">Users</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum
-        illum reiciendis repellat, accusamus eligendi saepe in facere et quaerat
-        assumenda, cumque impedit dolores. Hic maxime magni pariatur
-        necessitatibus dolores?
-      </p>
-    </div>
-  </section>
+  <div class="user container">
+    <b-row>
+      <b-col
+        sm="12"
+        md="6"
+        lg="6"
+        v-for="(user, idx) in $store.state.users"
+        :key="idx"
+      >
+        <user-card :user="user"></user-card>
+      </b-col>
+    </b-row>
+  </div>
 </template>
 
 <script>
+import UserCard from "~/components/UserCard.vue";
+
 export default {
-  name: "users",
+  components: {
+    UserCard,
+  },
+  head: {
+    title: "Users",
+  },
+  fetch({ $axios, store }) {
+    return $axios.$get("/users").then((res) => {
+      store.commit("updateusers", res);
+    });
+  },
 };
 </script>
-
 <style lang="scss" scoped>
+.user {
+  padding-top: 25px;
+}
 </style>
