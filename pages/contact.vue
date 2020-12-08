@@ -1,7 +1,7 @@
 <template>
   <section class="section is-medium">
     <div class="container has-text-centered">
-      <h1 class="title">About Me</h1>
+      <h1 class="title">Contact Me</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum
         illum reiciendis repellat, accusamus eligendi saepe in facere et quaerat
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "about",
+  name: "contact",
 };
 </script>
 
