@@ -3,7 +3,7 @@
     <b-row>
       <b-col
         sm="12"
-        md="6"
+        md="12"
         lg="6"
         v-for="(user, idx) in $store.state.users"
         :key="idx"
@@ -33,6 +33,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .user {
-  padding-top: 25px;
+  padding-top: 35px;
 }
 </style>

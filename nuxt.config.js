@@ -9,10 +9,7 @@ export default {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href: "https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      }
+      { rel: "stylesheet",href: "https://pro.fontawesome.com/releases/v5.10.0/css/all.css"}
     ]
   },
 
