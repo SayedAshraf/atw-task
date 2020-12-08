@@ -12,8 +12,7 @@
           <div class="birth"><i class="fas fa-id-card"></i>{{ user.id }}</div>
           <div class="email"><i class="fas fa-fw fa-envelope"></i>{{ user.email }}</div>
           <div class="phone"><i class="fas fa-fw fa-phone"></i>{{ user.phone }}</div>
-          <div class="nationality capitalize"><i class="fas fa-fw fa-globe-americas"></i>{{ user.address.city }}
-          </div>
+          <div class="nationality capitalize"><i class="fas fa-fw fa-globe-americas"></i>{{ user.address.city }}</div>
         </div>
       </div>
     </div>

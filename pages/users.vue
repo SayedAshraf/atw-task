@@ -21,8 +21,18 @@ export default {
   components: {
     UserCard,
   },
-  head: {
-    title: "Users",
+  // for SEO overiding nuxt config meta data with my page data
+  head() {
+    return {
+      title: "Users",
+      meta: [
+        {
+          hid: "description",
+          name: "Users",
+          content: "Users Data",
+        },
+      ],
+    };
   },
   fetch({ $axios, store }) {
     return $axios.$get("/users").then((res) => {

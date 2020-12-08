@@ -1,22 +1,32 @@
 <template>
-  <section class="section is-medium">
-    <div class="container has-text-centered">
-      <h1 class="title">Contact Me</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum
-        illum reiciendis repellat, accusamus eligendi saepe in facere et quaerat
-        assumenda, cumque impedit dolores. Hic maxime magni pariatur
-        necessitatibus dolores?
-      </p>
-    </div>
-  </section>
+  <div class="contact container">
+    <FormValidation />
+  </div>
 </template>
 
 <script>
+import FormValidation from "~/components/FormValidation";
+
 export default {
   name: "contact",
+  components: { FormValidation },
+  head() {
+    return {
+      title: "Contact",
+      meta: [
+        {
+          hid: "description",
+          name: "Contact",
+          content: "Contact us!",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.contact {
+  padding-top: 35px;
+}
 </style>
